@@ -1,4 +1,4 @@
-# 🌐 Cool Sites
+#  Cool Sites
 
 A curated, hand-picked list of weird, wonderful, and technically impressive corners of the internet — built as a clean, fast, static HTML page with no frameworks, no ads, and no tracking.
 
