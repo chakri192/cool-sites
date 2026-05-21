@@ -2,7 +2,7 @@
 
 A curated, hand-picked list of weird, wonderful, and technically impressive corners of the internet — built as a clean, fast, static HTML page with no frameworks, no ads, and no tracking.
 
-**Live site:** https://YOUR-USERNAME.github.io/cool-sites
+**Live site:** https://chakri192.github.io/cool-sites/
 
 ---
 
@@ -52,8 +52,6 @@ A curated, hand-picked list of weird, wonderful, and technically impressive corn
 ## Customise
 
 **Add a site** — copy any `.site-item` block in `index.html`, update the link, name, description, URL, category (`data-cat`), badge class, and SVG icon.
-
-**Change your name** — find `Your Name` near the bottom of `index.html` and replace it.
 
 **Add a category** — add a `.badge-X` style, a filter `<button>`, and use `data-cat="X"` on items.
 
