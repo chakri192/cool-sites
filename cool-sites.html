@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>cool sites</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,700;0,800;1,400;1,700&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --bg:#f7f5f0;
+  --surface:#ffffff;
+  --border:#e6e1d8;
+  --border-hi:#cdc6b8;
+  --text:#141210;
+  --text-2:#6e6558;
+  --text-3:#aea89e;
+  --accent:#1a1a1a;
+  --sans:'Nunito',sans-serif;
+  --serif:'Plus Jakarta Sans',sans-serif;
+  --max:740px;
+}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:14px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.shell{max-width:var(--max);margin:0 auto;padding:0 2.25rem}
+
+/* ── Header ── */
+header{padding:4rem 0 2.5rem}
+.header-eyebrow{font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-3);margin-bottom:0.75rem}
+header h1{
+  font-family:var(--serif);
+  font-size:clamp(2.6rem,6vw,3.8rem);
+  font-weight:800;
+  letter-spacing:-0.03em;
+  line-height:0.97;
+  color:var(--text);
+  margin-bottom:1rem;
+}
+header h1 em{font-style:italic;font-weight:700;color:var(--text-2)}
+.header-sub{font-size:13.5px;font-weight:300;color:var(--text-2);max-width:400px;line-height:1.65}
+
+/* ── Filter ── */
+.filter-row{
+  display:flex;align-items:center;gap:5px;
+  padding:1rem 0;
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  margin-bottom:0;
+  flex-wrap:wrap;
+}
+.filter-label{font-size:10.5px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-3);margin-right:4px}
+.tag{
+  font-family:var(--sans);font-size:11.5px;font-weight:400;
+  padding:4px 11px;border-radius:2px;
+  border:1px solid transparent;
+  background:transparent;color:var(--text-2);
+  cursor:pointer;transition:all 0.12s;letter-spacing:0.01em;
+}
+.tag:hover{color:var(--text);border-color:var(--border-hi)}
+.tag.active{background:var(--text);color:var(--bg);border-color:var(--text)}
+.count{font-size:11px;color:var(--text-3);margin-left:auto;font-variant-numeric:tabular-nums;font-weight:300}
+
+/* ── List ── */
+.sites-list{display:flex;flex-direction:column}
+
+.site-item{
+  display:grid;
+  grid-template-columns:48px 1fr;
+  gap:0 1.25rem;
+  padding:1.05rem 0.6rem 1.05rem 0;
+  border-bottom:1px solid var(--border);
+  align-items:center;
+  text-decoration:none;color:inherit;
+  opacity:0;transform:translateY(6px);
+  animation:up 0.3s ease forwards;
+  transition:background 0.1s,border-radius 0.1s,padding 0.1s,margin 0.1s;
+  cursor:pointer;
+}
+.site-item:hover{
+  background:var(--surface);
+  margin:0 -1.1rem;
+  padding-left:1.1rem;padding-right:1.1rem;
+  border-radius:6px;
+  border-bottom-color:transparent;
+}
+.site-item:hover+.site-item{border-top:1px solid var(--border)}
+@keyframes up{to{opacity:1;transform:none}}
+
+/* ── Logo ── */
+.logo-box{
+  width:48px;height:48px;
+  border-radius:8px;
+  border:1px solid var(--border);
+  background:var(--surface);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;overflow:hidden;
+  transition:border-color 0.12s;
+}
+.site-item:hover .logo-box{border-color:var(--border-hi)}
+
+/* ── Info ── */
+.site-info{display:flex;flex-direction:column;gap:3px;min-width:0}
+.site-top{display:flex;align-items:center;gap:7px}
+.site-name{
+  font-family:var(--serif);
+  font-size:1rem;
+  font-weight:700;
+  color:var(--text);
+  letter-spacing:-0.02em;
+  line-height:1.1;
+}
+.site-badge{
+  font-family:var(--sans);
+  font-size:9.5px;font-weight:500;
+  padding:2px 7px;border-radius:2px;
+  letter-spacing:0.07em;text-transform:uppercase;border:1px solid;
+  flex-shrink:0;
+}
+.badge-interactive{color:#7a2808;background:#fdf0ec;border-color:#edc4ae}
+.badge-creative   {color:#3d2478;background:#f5f0ff;border-color:#cfc0f0}
+.badge-explore    {color:#0f3d6e;background:#eef4ff;border-color:#b4cef5}
+.badge-weird      {color:#14472a;background:#edfff4;border-color:#9adcb8}
+.badge-music      {color:#7a0f40;background:#fff0f5;border-color:#f5b0cc}
+.badge-science    {color:#084848;background:#edfafa;border-color:#88d0cc}
+.badge-tech       {color:#1a1060;background:#eeeeff;border-color:#b8b4f0}
+
+.site-row2{display:flex;align-items:baseline;gap:0.75rem;min-width:0}
+.site-desc{
+  font-size:12.5px;font-weight:300;color:var(--text-2);
+  line-height:1.5;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  flex:1;min-width:0;
+}
+.site-item:hover .site-desc{white-space:normal;overflow:visible;text-overflow:unset}
+.site-url{font-size:10.5px;color:var(--text-3);font-family:monospace;white-space:nowrap;flex-shrink:0;margin-left:auto}
+
+/* ── Footer ── */
+footer{
+  padding:2rem 0 3rem;
+  display:flex;justify-content:space-between;align-items:center;
+  border-top:1px solid var(--border);
+  margin-top:0;
+}
+.footer-by{
+  font-family:var(--serif);
+  font-size:1rem;font-weight:700;
+  letter-spacing:-0.02em;color:var(--text-2);
+}
+.footer-by strong{color:var(--text);font-weight:700}
+.footer-note{font-size:10.5px;color:var(--text-3);font-weight:300;letter-spacing:0.03em}
+
+@media(max-width:560px){
+  .site-item{grid-template-columns:40px 1fr}
+  .logo-box{width:40px;height:40px;border-radius:6px}
+  .site-url{display:none}
+  header h1{font-size:2.6rem}
+  .site-name{font-size:1.05rem}
+}
+</style>
+</head>
+<body>
+<div class="shell">
+
+<header>
+  <p class="header-eyebrow">Curated · May 2026</p>
+  <h1>Cool stuff<br>on the <em>internet.</em></h1>
+  <p class="header-sub">Weird, wonderful, and genuinely worth your time. No ads, no sponsored slots — just good links.</p>
+</header>
+
+<div class="filter-row">
+  <span class="filter-label">Filter</span>
+  <button class="tag active" onclick="filter('all',this)">All</button>
+  <button class="tag" onclick="filter('interactive',this)">Interactive</button>
+  <button class="tag" onclick="filter('creative',this)">Creative</button>
+  <button class="tag" onclick="filter('explore',this)">Explore</button>
+  <button class="tag" onclick="filter('weird',this)">Weird</button>
+  <button class="tag" onclick="filter('music',this)">Music</button>
+  <button class="tag" onclick="filter('science',this)">Science</button>
+  <button class="tag" onclick="filter('tech',this)">Tech</button>
+  <span class="count" id="count">17 sites</span>
+</div>
+
+<div class="sites-list" id="list">
+
+  <a href="https://neal.fun" target="_blank" rel="noopener" class="site-item" data-cat="interactive" style="animation-delay:.04s">
+    <div class="logo-box">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><rect width="30" height="30" rx="6" fill="#ecfdf5"/><text x="4" y="21" font-family="Georgia,serif" font-size="16" font-weight="800" fill="#16a34a">n.</text></svg>
+    </div>
+    <div class="site-info">
+      <div class="site-top"><span class="site-name">Neal.fun</span><span class="site-badge badge-interactive">Interactive</span></div>
+      <div class="site-row2"><span class="site-desc">Spend Bill Gates' money, play The Password Game, scroll to the ocean floor — each piece is weird, delightful, and oddly educational.</span><span class="site-url">neal.fun</span></div>
+    </div>
+  </a>
+
+  <a href="https://radio.garden" target="_blank" rel="noopener" class="site-item" data-cat="music" style="animation-delay:.07s">
+    <div class="logo-box">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><rect width="30" height="30" rx="6" fill="#f0fdf4"/><circle cx="15" cy="15" r="8.5" stroke="#16a34a" stroke-width="1.4" fill="none"/><ellipse cx="15" cy="15" rx="3.5" ry="8.5" stroke="#16a34a" stroke-width="1.1" fill="none"/><line x1="6.5" y1="15" x2="23.5" y2="15" stroke="#16a34a" stroke-width="1.1"/><circle cx="15" cy="15" r="1.8" fill="#16a34a"/></svg>
+    </div>
+    <div class="site-info">
+      <div class="site-top"><span class="site-name">Radio Garden</span><span class="site-badge badge-music">Music</span></div>
+      <div class="site-row2"><span class="site-desc">A 3D spinning globe covered in live radio stations. Click any dot to hear what's playing in that city right now.</span><span class="site-url">radio.garden</span></div>
+    </div>
+  </a>
+
+  <a href="https://geoguessr.com" target="_blank" rel="noopener" class="site-item" data-cat="explore" style="animation-delay:.10s">
+    <div class="logo-box">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><rect width="30" height="30" rx="6" fill="#eff6ff"/><circle cx="15" cy="13" r="5.5" stroke="#2563eb" stroke-width="1.4" fill="none"/><circle cx="15" cy="13" r="1.8" fill="#2563eb"/><path d="M15 18.5 L12.5 24.5 L15 23 L17.5 24.5 Z" fill="#2563eb"/></svg>
+    </div>
+    <div class="site-info">
+      <div class="site-top"><span class="site-name">GeoGuessr</span><span class="site-badge badge-explore">Explore</span></div>
+      <div class="site-row2"><span class="site-desc">Dropped anywhere on Earth via Street View. No context. Guess your location. Sounds easy until you're deciphering road signs in Kazakhstan at 2am.</span><span class="site-url">geoguessr.com</span></div>
+    </div>
+  </a>
+
+  <a href="https://quickdraw.withgoogle.com" target="_blank" rel="noopener" class="site-item" data-cat="interactive" style="animation-delay:.13s">
+    <div class="logo-box">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><rect width="30" height="30" rx="6" fill="#fefce8"/><path d="M7 21 Q11 9 15 13 Q19 17 23 7" stroke="#ca8a04" stroke-width="1.8" stroke-linecap="round" fill="none"/><circle cx="23" cy="7" r="2" fill="#ca8a04"/></svg>
+    </div>
+    <div class="site-info">
+      <div class="site-top"><span class="site-name">Quick, Draw!</span><span class="site-badge badge-interactive">Interactive</span></div>
+      <div class="site-row2"><span class="site-desc">Google's neural net guesses your sketches in 20 seconds. It works alarmingly well even for terrible drawings, which raises unsettling questions.</span><span class="site-url">quickdraw.withgoogle.com</span></div>
+    </div>
+  </a>
+
+  <a href="https://patatap.com" target="_blank" rel="noopener" class="site-item" data-cat="music" style="animation-delay:.16s">
+    <div class="logo-box">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><rect width="30" height="30" rx="6" fill="#fdf2f8"/><circle cx="10.5" cy="15" r="4" fill="#ec4899" opacity=".65"/><circle cx="19.5" cy="15" r="4" fill="#a855f7" opacity=".65"/><circle cx="15" cy="15" r="4" fill="#f472b6" opacity=".55"/></svg>
+    </div>
+    <div class="site-info">
+      <div class="site-top"><span class="site-name">Patatap</span><span class="site-badge badge-music">Music</span></div>
+      <div class="site-row2"><span class="site-desc">Every key on your keyboard triggers a sound and a burst of abstract animation. Mash them all. Accidentally compose something beautiful.</span><span class="site-url">patatap.com</span></div>
+    </div>
+  </a>
+
+  <a href="https://thispersondoesnotexist.com" target="_blank" rel="noopener" class="site-item" data-cat="science" style="animation-delay:.19s">
+    <div class="logo-box">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><rect width="30" height="30" rx="6" fill="#f0fdfa"/><circle cx="15" cy="12.5" r="4.5" stroke="#0d9488" stroke-width="1.4" fill="none"/><path d="M6.5 25 Q6.5 19.5 15 19.5 Q23.5 19.5 23.5 25" stroke="#0d9488" stroke-width="1.4" fill="none" stroke-linecap="round"/><line x1="19" y1="8.5" x2="24" y2="6.5" stroke="#0d9488" stroke-width="1.1" stroke-dasharray="1.5 1.5"/><circle cx="25" cy="6" r="1.4" fill="#0d9488" opacity=".45"/></svg>
+    </div>
+    <div class="site-info">
+      <div class="site-top"><span class="site-name">This Person Does Not Exist</span><span class="site-badge badge-science">Science</span></div>
+      <div class="site-row2"><span class="site-desc">Every refresh shows a new hyper-realistic AI-generated face. Nobody you're looking at has ever existed. Keep refreshing. You'll start feeling things.</span><span class="site-url">thispersondoesnotexist.com</span></div>
+    </div>
+  </a>
+
+  <a href="https://theuselessweb.com" target="_blank" rel="noopener" class="site-item" data-cat="weird" style="animation-delay:.22s">
+    <div class="logo-box">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><rect width="30" height="30" rx="6" fill="#f9fafb"/><rect x="6" y="9" width="18" height="13" rx="2" stroke="#6b7280" stroke-width="1.3" fill="none"/><line x1="6" y1="13" x2="24" y2="13" stroke="#6b7280" stroke-width="1.1"/><circle cx="9" cy="11" r=".9" fill="#6b7280"/><circle cx="12" cy="11" r=".9" fill="#6b7280"/><path d="M11 18.5 Q15 16.5 19 18.5" stroke="#6b7280" stroke-width="1.1" stroke-linecap="round" fill="none"/></svg>
+    </div>
+    <div class="site-info">
+      <div class="site-top"><span class="site-name">The Useless Web</span><span class="site-badge badge-weird">Weird</span></div>
+      <div class="site-row2"><span class="site-desc">Press the button. Get teleported to a completely random, completely pointless website. Some are soothing. All are deeply committed to being nothing.</span><span class="site-url">theuselessweb.com</span></div>
+    </div>
+  </a>
+
+  <a href="https://thisissand.com" target="_blank" rel="noopener" class="site-item" data-cat="creative" style="animation-delay:.25s">
+    <div class="logo-box">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><rect width="30" height="30" rx="6" fill="#fffbeb"/><path d="M7 26 L23 26 L23 17 Q19 13 15 17 Q11 21 7 17 Z" fill="#f59e0b" opacity=".35"/><path d="M7 26 L23 26 L23 20 Q19 16 15 20 Q11 24 7 20 Z" fill="#d97706" opacity=".55"/><circle cx="12" cy="11" r="1.4" fill="#f59e0b"/><circle cx="18" cy="9.5" r="1" fill="#ef4444" opacity=".65"/><circle cx="15" cy="13.5" r="1.1" fill="#10b981" opacity=".65"/></svg>
+    </div>
+    <div class="site-info">
+      <div class="site-top"><span class="site-name">This Is Sand</span><span class="site-badge badge-creative">Creative</span></div>
+      <div class="site-row2"><span class="site-desc">Pour colorful sand into a glass. Switch colors, layer gradients, build tiny landscapes grain by grain. Far more meditative than it should be.</span><span class="site-url">thisissand.com</span></div>
+    </div>
+  </a>
+
+  <a href="https://akinator.com" target="_blank" rel="noopener" class="site-item" data-cat="interactive" style="animation-delay:.28s">
+    <div class="logo-box">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><rect width="30" height="30" rx="6" fill="#faf5ff"/><circle cx="15" cy="13" r="4.5" stroke="#7c3aed" stroke-width="1.4" fill="none"/><path d="M12.5 11.5 Q15 8.5 17.5 11.5" stroke="#7c3aed" stroke-width="1.1" fill="none"/><line x1="15" y1="17.5" x2="15" y2="23" stroke="#7c3aed" stroke-width="1.3" stroke-linecap="round"/><line x1="9.5" y1="20" x2="20.5" y2="20" stroke="#7c3aed" stroke-width="1.3" stroke-linecap="round"/><line x1="15" y1="23" x2="11.5" y2="27" stroke="#7c3aed" stroke-width="1.3" stroke-linecap="round"/><line x1="15" y1="23" x2="18.5" y2="27" stroke="#7c3aed" stroke-width="1.3" stroke-linecap="round"/></svg>
+    </div>
+    <div class="site-info">
+      <div class="site-top"><span class="site-name">Akinator</span><span class="site-badge badge-interactive">Interactive</span></div>
+      <div class="site-row2"><span class="site-desc">Think of any real or fictional character. A cartoon genie asks yes/no questions and guesses correctly in under 20. It will get it. It always gets it.</span><span class="site-url">akinator.com</span></div>
+    </div>
+  </a>
+
+  <a href="https://ncase.me/loopy/" target="_blank" rel="noopener" class="site-item" data-cat="science" style="animation-delay:.31s">
+    <div class="logo-box">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><rect width="30" height="30" rx="6" fill="#f0fdfa"/><circle cx="9.5" cy="15" r="3" stroke="#0d9488" stroke-width="1.3" fill="none"/><circle cx="20.5" cy="15" r="3" stroke="#0d9488" stroke-width="1.3" fill="none"/><path d="M12.5 13 Q15 7 18 13" stroke="#0d9488" stroke-width="1.1" fill="none" marker-end="url(#a1)"/><path d="M18 17 Q15 23 12.5 17" stroke="#0d9488" stroke-width="1.1" fill="none" marker-end="url(#a1)"/><defs><marker id="a1" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto"><path d="M0 0 L4 2 L0 4 Z" fill="#0d9488"/></marker></defs></svg>
+    </div>
+    <div class="site-info">
+      <div class="site-top"><span class="site-name">Loopy</span><span class="site-badge badge-science">Science</span></div>
+      <div class="site-row2"><span class="site-desc">Draw cause-and-effect loops and watch them simulate in real time. Model ecosystems, rumours, anxiety spirals — then break the cycle.</span><span class="site-url">ncase.me/loopy</span></div>
+    </div>
+  </a>
+
+  <a href="https://screamintothevoid.com" target="_blank" rel="noopener" class="site-item" data-cat="weird" style="animation-delay:.34s">
+    <div class="logo-box">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><rect width="30" height="30" rx="6" fill="#fef2f2"/><circle cx="15" cy="14" r="5.5" stroke="#dc2626" stroke-width="1.3" fill="none"/><ellipse cx="15" cy="16" rx="2.2" ry="3" fill="#dc2626" opacity=".45"/><line x1="15" y1="8.5" x2="15" y2="5.5" stroke="#dc2626" stroke-width="1.1" stroke-linecap="round"/><line x1="20" y1="10" x2="22.5" y2="7.5" stroke="#dc2626" stroke-width="1.1" stroke-linecap="round"/><line x1="10" y1="10" x2="7.5" y2="7.5" stroke="#dc2626" stroke-width="1.1" stroke-linecap="round"/></svg>
+    </div>
+    <div class="site-info">
+      <div class="site-top"><span class="site-name">Scream Into the Void</span><span class="site-badge badge-weird">Weird</span></div>
+      <div class="site-row2"><span class="site-desc">Type something you need to scream. Read it once. Watch it vanish forever. That's the whole website. Somehow among the most cathartic on the internet.</span><span class="site-url">screamintothevoid.com</span></div>
+    </div>
+  </a>
+
+  <a href="https://stars.chromeexperiments.com" target="_blank" rel="noopener" class="site-item" data-cat="explore" style="animation-delay:.37s">
+    <div class="logo-box">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><rect width="30" height="30" rx="6" fill="#fafaf9"/><circle cx="15" cy="15" r="2.8" fill="#f59e0b"/><circle cx="7.5" cy="9.5" r=".9" fill="#94a3b8" opacity=".55"/><circle cx="23" cy="7.5" r="1.1" fill="#94a3b8" opacity=".45"/><circle cx="25" cy="19" r=".7" fill="#94a3b8" opacity=".65"/><circle cx="5.5" cy="21" r=".9" fill="#94a3b8" opacity=".45"/><circle cx="19.5" cy="25" r=".7" fill="#94a3b8" opacity=".55"/><circle cx="10" cy="24" r=".55" fill="#94a3b8" opacity=".4"/><circle cx="27" cy="13" r=".65" fill="#94a3b8" opacity=".45"/><circle cx="21" cy="12" r=".5" fill="#94a3b8" opacity=".75"/><circle cx="9.5" cy="16.5" r=".45" fill="#94a3b8" opacity=".55"/></svg>
+    </div>
+    <div class="site-info">
+      <div class="site-top"><span class="site-name">100,000 Stars</span><span class="site-badge badge-explore">Explore</span></div>
+      <div class="site-row2"><span class="site-desc">An interactive 3D map of the 100,000 nearest stars. Zoom out until our Sun is a single unremarkable pixel. Instant existential crisis, beautifully rendered.</span><span class="site-url">stars.chromeexperiments.com</span></div>
+    </div>
+  </a>
+
+  <a href="https://paveldogreat.github.io/WebGL-Fluid-Simulation/" target="_blank" rel="noopener" class="site-item" data-cat="tech" style="animation-delay:.40s">
+    <div class="logo-box">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><rect width="30" height="30" rx="6" fill="#f0f0ff"/><path d="M5 18 Q8 10 12 15 Q16 20 20 10 Q23 4 26 12" stroke="#4f46e5" stroke-width="1.6" stroke-linecap="round" fill="none"/><path d="M5 22 Q9 16 13 19 Q17 22 21 15 Q24 10 26 16" stroke="#818cf8" stroke-width="1.1" stroke-linecap="round" fill="none" opacity=".6"/></svg>
+    </div>
+    <div class="site-info">
+      <div class="site-top"><span class="site-name">WebGL Fluid Simulation</span><span class="site-badge badge-tech">Tech</span></div>
+      <div class="site-row2"><span class="site-desc">GPU-accelerated fluid physics solver running entirely in your browser. Swipe to paint swirling neon flows in real time. Navier-Stokes equations have never looked this good.</span><span class="site-url">paveldogreat.github.io</span></div>
+    </div>
+  </a>
+
+  <a href="https://ncase.me/trust/" target="_blank" rel="noopener" class="site-item" data-cat="tech" style="animation-delay:.43s">
+    <div class="logo-box">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><rect width="30" height="30" rx="6" fill="#f0f7ff"/><circle cx="10" cy="10" r="3.5" stroke="#2563eb" stroke-width="1.3" fill="none"/><circle cx="20" cy="10" r="3.5" stroke="#2563eb" stroke-width="1.3" fill="none"/><circle cx="15" cy="21" r="3.5" stroke="#2563eb" stroke-width="1.3" fill="none"/><line x1="13.5" y1="10" x2="16.5" y2="10" stroke="#2563eb" stroke-width="1.1"/><line x1="11.8" y1="13" x2="13.5" y2="18" stroke="#2563eb" stroke-width="1.1"/><line x1="18.2" y1="13" x2="16.5" y2="18" stroke="#2563eb" stroke-width="1.1"/></svg>
+    </div>
+    <div class="site-info">
+      <div class="site-top"><span class="site-name">The Evolution of Trust</span><span class="site-badge badge-tech">Tech</span></div>
+      <div class="site-row2"><span class="site-desc">An interactive guide to game theory — why we cooperate, why we betray, and how trust breaks down. Play through scenarios that explain human nature better than any textbook.</span><span class="site-url">ncase.me/trust</span></div>
+    </div>
+  </a>
+
+  <a href="https://ncase.me/polygons/" target="_blank" rel="noopener" class="site-item" data-cat="tech" style="animation-delay:.46s">
+    <div class="logo-box">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><rect width="30" height="30" rx="6" fill="#fffbf0"/><rect x="5" y="5" width="9" height="9" rx="1.5" fill="#f59e0b" opacity=".8"/><polygon points="20,5 25,14 15,14" fill="#3b82f6" opacity=".75"/><rect x="5" y="17" width="9" height="9" rx="1.5" fill="#3b82f6" opacity=".65"/><polygon points="20,17 25,26 15,26" fill="#f59e0b" opacity=".7"/></svg>
+    </div>
+    <div class="site-info">
+      <div class="site-top"><span class="site-name">Parable of the Polygons</span><span class="site-badge badge-tech">Tech</span></div>
+      <div class="site-row2"><span class="site-desc">A playable simulation showing how tiny individual biases cascade into large-scale segregation. Based on Schelling's model. Uncomfortable, beautiful, and impossible to argue with.</span><span class="site-url">ncase.me/polygons</span></div>
+    </div>
+  </a>
+
+  <a href="https://experiments.withgoogle.com" target="_blank" rel="noopener" class="site-item" data-cat="tech" style="animation-delay:.49s">
+    <div class="logo-box">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><rect width="30" height="30" rx="6" fill="#f8f9ff"/><circle cx="15" cy="15" r="4" stroke="#4285f4" stroke-width="1.4" fill="none"/><line x1="15" y1="4" x2="15" y2="8.5" stroke="#ea4335" stroke-width="1.8" stroke-linecap="round"/><line x1="15" y1="21.5" x2="15" y2="26" stroke="#34a853" stroke-width="1.8" stroke-linecap="round"/><line x1="4" y1="15" x2="8.5" y2="15" stroke="#fbbc05" stroke-width="1.8" stroke-linecap="round"/><line x1="21.5" y1="15" x2="26" y2="15" stroke="#4285f4" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </div>
+    <div class="site-info">
+      <div class="site-top"><span class="site-name">Google Experiments</span><span class="site-badge badge-tech">Tech</span></div>
+      <div class="site-row2"><span class="site-desc">A curated gallery of creative coding experiments — AI, WebGL, music, AR — built by developers and artists. Hundreds of browser-based projects, each stranger than the last.</span><span class="site-url">experiments.withgoogle.com</span></div>
+    </div>
+  </a>
+
+  <a href="https://www.shadertoy.com" target="_blank" rel="noopener" class="site-item" data-cat="tech" style="animation-delay:.52s">
+    <div class="logo-box">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><rect width="30" height="30" rx="6" fill="#0f0f1a"/><circle cx="15" cy="15" r="7.5" fill="none" stroke="#7c3aed" stroke-width="1.1" opacity=".5"/><circle cx="15" cy="15" r="4.5" fill="none" stroke="#a78bfa" stroke-width="1.1" opacity=".7"/><circle cx="15" cy="15" r="2" fill="#c4b5fd"/></svg>
+    </div>
+    <div class="site-info">
+      <div class="site-top"><span class="site-name">Shadertoy</span><span class="site-badge badge-tech">Tech</span></div>
+      <div class="site-row2"><span class="site-desc">A community of GPU shader programs running live in your browser. Entire ray-traced 3D worlds and fractals built in 50 lines of code. The most humbling place on the internet.</span><span class="site-url">shadertoy.com</span></div>
+    </div>
+  </a>
+
+</div>
+
+<footer>
+  <p class="footer-by">by <strong>Your Name</strong></p>
+  <span class="footer-note">No ads · no tracking</span>
+</footer>
+
+</div>
+<script>
+function filter(cat,el){
+  document.querySelectorAll('.tag').forEach(t=>t.classList.remove('active'));
+  el.classList.add('active');
+  const items=document.querySelectorAll('.site-item');
+  let n=0;
+  items.forEach(item=>{
+    const show=cat==='all'||item.dataset.cat===cat;
+    item.style.display=show?'grid':'none';
+    if(show){
+      item.style.animationDelay=(n*0.05)+'s';
+      item.style.animation='none';
+      void item.offsetWidth;
+      item.style.animation='';
+      n++;
+    }
+  });
+  document.getElementById('count').textContent=n+' site'+(n!==1?'s':'');
+}
+</script>
+</body>
+</html>
