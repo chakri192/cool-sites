@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="470" viewBox="0 0 880 470" font-family="Plus Jakarta Sans,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">
+  <defs>
+    <linearGradient id="pg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#14161c"/>
+      <stop offset="100%" stop-color="#0e1015"/>
+    </linearGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <rect width="880" height="470" rx="10" fill="#0b0d11"/>
+  <rect x="0.5" y="0.5" width="879" height="469" rx="10" fill="none" stroke="#2b313d"/>
+
+  <!-- browser chrome -->
+  <rect x="28" y="26" width="824" height="418" rx="12" fill="url(#pg)" stroke="#2b313d" stroke-width="1.2"/>
+  <rect x="28" y="26" width="824" height="36" rx="12" fill="#191d25"/>
+  <rect x="28" y="50" width="824" height="12" fill="#191d25"/>
+  <line x1="28" y1="62" x2="852" y2="62" stroke="#2b313d"/>
+  <circle cx="50" cy="44" r="5.5" fill="#ff5f57"/>
+  <circle cx="70" cy="44" r="5.5" fill="#febc2e"/>
+  <circle cx="90" cy="44" r="5.5" fill="#28c840"/>
+  <rect x="300" y="35" width="280" height="18" rx="9" fill="#0f1319"/>
+  <text x="440" y="48" font-size="10" font-family="SFMono-Regular,Menlo,monospace" fill="#7d8899" text-anchor="middle">chakri192.github.io/cool-sites</text>
+
+  <!-- header -->
+  <text x="60" y="104" font-size="24" font-weight="800" fill="#f0f4f9">Cool Sites</text>
+  <text x="60" y="126" font-size="11.5" font-family="Nunito,-apple-system,sans-serif" fill="#8a9bb4">A hand-picked list of the weird, wonderful, and technically impressive corners of the internet.</text>
+
+  <!-- filter pills -->
+  <g font-size="10.5" font-weight="600">
+    <rect x="60" y="146" width="46" height="24" rx="12" fill="#e6edf3"/>
+    <text x="83" y="162" fill="#0b0d11" text-anchor="middle">All</text>
+    <rect x="114" y="146" width="76" height="24" rx="12" fill="none" stroke="#39414f"/>
+    <text x="152" y="162" fill="#8a9bb4" text-anchor="middle">Interactive</text>
+    <rect x="198" y="146" width="58" height="24" rx="12" fill="none" stroke="#39414f"/>
+    <text x="227" y="162" fill="#8a9bb4" text-anchor="middle">Music</text>
+    <rect x="264" y="146" width="64" height="24" rx="12" fill="none" stroke="#39414f"/>
+    <text x="296" y="162" fill="#8a9bb4" text-anchor="middle">Explore</text>
+    <rect x="336" y="146" width="56" height="24" rx="12" fill="none" stroke="#39414f"/>
+    <text x="364" y="162" fill="#8a9bb4" text-anchor="middle">Weird</text>
+    <rect x="400" y="146" width="66" height="24" rx="12" fill="none" stroke="#39414f"/>
+    <text x="433" y="162" fill="#8a9bb4" text-anchor="middle">Creative</text>
+    <rect x="474" y="146" width="64" height="24" rx="12" fill="none" stroke="#39414f"/>
+    <text x="506" y="162" fill="#8a9bb4" text-anchor="middle">Science</text>
+    <rect x="546" y="146" width="48" height="24" rx="12" fill="none" stroke="#39414f"/>
+    <text x="570" y="162" fill="#8a9bb4" text-anchor="middle">Tech</text>
+  </g>
+
+  <!-- cards -->
+  <g filter="url(#sh)">
+    <!-- row 1 -->
+    <rect x="60" y="190" width="250" height="72" rx="10" fill="#161a21" stroke="#2b313d"/>
+    <rect x="74" y="204" width="30" height="30" rx="8" fill="#2a3a52"/>
+    <circle cx="89" cy="219" r="7" fill="none" stroke="#7fb0ff" stroke-width="1.6"/>
+    <text x="116" y="215" font-size="12" font-weight="700" fill="#f0f4f9">Neal.fun</text>
+    <rect x="196" y="205" width="62" height="14" rx="7" fill="#7fb0ff" fill-opacity="0.16"/>
+    <text x="227" y="215" font-size="8" font-weight="700" fill="#7fb0ff" text-anchor="middle">INTERACTIVE</text>
+    <text x="116" y="231" font-size="9.5" font-family="Nunito,sans-serif" fill="#8a9bb4">Scroll through the universe, spend</text>
+    <text x="116" y="244" font-size="9.5" font-family="Nunito,sans-serif" fill="#8a9bb4">Bill Gates' money, price of life…</text>
+
+    <rect x="326" y="190" width="250" height="72" rx="10" fill="#161a21" stroke="#2b313d"/>
+    <rect x="340" y="204" width="30" height="30" rx="8" fill="#3a2a4e"/>
+    <path d="M349 226 l0 -12 l10 -2 l0 12" fill="none" stroke="#c4a2ff" stroke-width="1.6"/>
+    <circle cx="347" cy="226" r="2.4" fill="#c4a2ff"/><circle cx="357" cy="224" r="2.4" fill="#c4a2ff"/>
+    <text x="382" y="215" font-size="12" font-weight="700" fill="#f0f4f9">Radio Garden</text>
+    <rect x="490" y="205" width="42" height="14" rx="7" fill="#c4a2ff" fill-opacity="0.16"/>
+    <text x="511" y="215" font-size="8" font-weight="700" fill="#c4a2ff" text-anchor="middle">MUSIC</text>
+    <text x="382" y="231" font-size="9.5" font-family="Nunito,sans-serif" fill="#8a9bb4">Spin a globe, land on a live local</text>
+    <text x="382" y="244" font-size="9.5" font-family="Nunito,sans-serif" fill="#8a9bb4">radio station anywhere on earth.</text>
+
+    <rect x="592" y="190" width="228" height="72" rx="10" fill="#161a21" stroke="#2b313d"/>
+    <rect x="606" y="204" width="30" height="30" rx="8" fill="#2a4a3a"/>
+    <path d="M613 219 q7 -9 14 0 q-7 9 -14 0" fill="none" stroke="#7ddc8b" stroke-width="1.5"/>
+    <text x="648" y="215" font-size="12" font-weight="700" fill="#f0f4f9">Shadertoy</text>
+    <rect x="762" y="205" width="42" height="14" rx="7" fill="#7ddc8b" fill-opacity="0.16"/>
+    <text x="783" y="215" font-size="8" font-weight="700" fill="#7ddc8b" text-anchor="middle">TECH</text>
+    <text x="648" y="231" font-size="9.5" font-family="Nunito,sans-serif" fill="#8a9bb4">Fragment shaders written live,</text>
+    <text x="648" y="244" font-size="9.5" font-family="Nunito,sans-serif" fill="#8a9bb4">in the browser, by strangers.</text>
+
+    <!-- row 2 -->
+    <rect x="60" y="274" width="250" height="72" rx="10" fill="#161a21" stroke="#2b313d"/>
+    <rect x="74" y="288" width="30" height="30" rx="8" fill="#4e3a2a"/>
+    <path d="M82 310 l7 -14 l7 14 z" fill="none" stroke="#f0b866" stroke-width="1.5"/>
+    <text x="116" y="299" font-size="12" font-weight="700" fill="#f0f4f9">GeoGuessr</text>
+    <rect x="206" y="289" width="52" height="14" rx="7" fill="#f0b866" fill-opacity="0.16"/>
+    <text x="232" y="299" font-size="8" font-weight="700" fill="#f0b866" text-anchor="middle">EXPLORE</text>
+    <text x="116" y="315" font-size="9.5" font-family="Nunito,sans-serif" fill="#8a9bb4">Dropped somewhere on Street View.</text>
+    <text x="116" y="328" font-size="9.5" font-family="Nunito,sans-serif" fill="#8a9bb4">Work out where. Harder than it sounds.</text>
+
+    <rect x="326" y="274" width="250" height="72" rx="10" fill="#161a21" stroke="#2b313d"/>
+    <rect x="340" y="288" width="30" height="30" rx="8" fill="#4e2a34"/>
+    <circle cx="355" cy="303" r="7.5" fill="none" stroke="#f2707c" stroke-width="1.5"/>
+    <text x="355" y="307" font-size="10" font-weight="700" fill="#f2707c" text-anchor="middle">?</text>
+    <text x="382" y="299" font-size="12" font-weight="700" fill="#f0f4f9">The Useless Web</text>
+    <rect x="498" y="289" width="46" height="14" rx="7" fill="#f2707c" fill-opacity="0.16"/>
+    <text x="521" y="299" font-size="8" font-weight="700" fill="#f2707c" text-anchor="middle">WEIRD</text>
+    <text x="382" y="315" font-size="9.5" font-family="Nunito,sans-serif" fill="#8a9bb4">One button. Somewhere pointless.</text>
+    <text x="382" y="328" font-size="9.5" font-family="Nunito,sans-serif" fill="#8a9bb4">That is the entire proposition.</text>
+
+    <rect x="592" y="274" width="228" height="72" rx="10" fill="#161a21" stroke="#2b313d"/>
+    <rect x="606" y="288" width="30" height="30" rx="8" fill="#2a3f4e"/>
+    <circle cx="621" cy="303" r="2" fill="#5fd0de"/>
+    <circle cx="621" cy="303" r="7" fill="none" stroke="#5fd0de" stroke-width="1.2" stroke-dasharray="2 2"/>
+    <text x="648" y="299" font-size="12" font-weight="700" fill="#f0f4f9">100,000 Stars</text>
+    <rect x="754" y="289" width="52" height="14" rx="7" fill="#5fd0de" fill-opacity="0.16"/>
+    <text x="780" y="299" font-size="8" font-weight="700" fill="#5fd0de" text-anchor="middle">SCIENCE</text>
+    <text x="648" y="315" font-size="9.5" font-family="Nunito,sans-serif" fill="#8a9bb4">Zoom out from the sun until the</text>
+    <text x="648" y="328" font-size="9.5" font-family="Nunito,sans-serif" fill="#8a9bb4">whole galaxy fits on screen.</text>
+  </g>
+
+  <line x1="60" y1="372" x2="820" y2="372" stroke="#2b313d"/>
+  <text x="60" y="394" font-size="10" font-family="Nunito,sans-serif" fill="#5d6675">have fun · be happy</text>
+  <text x="820" y="394" font-size="10" font-family="SFMono-Regular,Menlo,monospace" fill="#5d6675" text-anchor="end">17 sites · 7 categories · one file</text>
+
+  <text x="440" y="424" font-size="9.5" font-family="SFMono-Regular,Menlo,monospace" fill="#5d6675" text-anchor="middle">no framework · no build step · no tracker · no request that isn't a font</text>
+</svg>
