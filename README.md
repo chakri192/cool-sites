@@ -99,3 +99,10 @@ cool-sites/
 ## License
 
 MIT for the page itself. The linked sites belong to their own authors.
+
+## Contributors
+
+| | |
+|---|---|
+| [chakri192](https://github.com/chakri192) | Author |
+| [aider](https://github.com/Aider-AI/aider) | AI pair programmer |
