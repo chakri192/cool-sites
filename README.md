@@ -9,7 +9,7 @@ A list of fun and interesting websites, sorted by category.
 | Category | Sites |
 |---|---|
 | Interactive | Neal.fun, Quick Draw!, Akinator |
-| Music | Radio Garden, Patatap |
+| Music | Radio Garden, Patatap, StagePeek |
 | Explore | GeoGuessr, 100,000 Stars |
 | Weird | The Useless Web, Scream Into the Void |
 | Creative | This Is Sand |
